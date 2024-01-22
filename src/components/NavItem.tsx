@@ -27,7 +27,15 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
             className={cn("h-4 w-4 transition-all text-muted-foreground ", {
               "-rotate-180": isOpen,
             })}
-          /> 
+          />
+
+
+
+
+
+
+
+          
         </Button>
       </div>
     </div>
