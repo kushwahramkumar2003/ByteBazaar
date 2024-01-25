@@ -6,7 +6,7 @@ import {webpackBundler} from "@payloadcms/bundler-webpack";
 import path from "path";
 
 export default buildConfig({
-    serverURL:process.env.NEXT_PUBLIC_URL || '',
+    serverURL:process.env.NEXT_PUBLIC_SERVER_URL || '',
     collections:[],
     routes:{
         admin:'/sell'
