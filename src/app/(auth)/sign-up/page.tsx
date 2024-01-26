@@ -12,6 +12,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
+import {trpc} from "@/trpc/client";
 
 const Page = () => {
   const {
@@ -21,6 +22,8 @@ const Page = () => {
   } = useForm<TAuthCredentialsValidator>({
     resolver: zodResolver(AuthCredentialsValidator),
   });
+
+//   const {data} = trpc.anyApiRoute.useQuery()
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {};
 
