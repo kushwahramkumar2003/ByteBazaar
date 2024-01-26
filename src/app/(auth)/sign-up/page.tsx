@@ -22,9 +22,7 @@ const Page = () => {
     resolver: zodResolver(AuthCredentialsValidator),
   });
 
-  const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
-
-  };
+  const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {};
 
   return (
     <>
