@@ -1,6 +1,5 @@
 import { buildConfig } from "payload/config";
 import { slateEditor } from "@payloadcms/richtext-slate";
-import * as mongoose from "mongoose";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { webpackBundler } from "@payloadcms/bundler-webpack";
 import path from "path";

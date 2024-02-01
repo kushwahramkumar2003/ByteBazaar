@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env PAYLOAD_CONFIG_PATH=src/paload.config.ts nodemon",
+    "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
+    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:types",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -29,6 +30,7 @@
     "express": "^4.18.2",
     "lucide-react": "^0.312.0",
     "next": "14.1.0",
+    "nodemailer": "^6.9.8",
     "payload": "^2.8.2",
     "react": "^18",
     "react-dom": "^18",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
