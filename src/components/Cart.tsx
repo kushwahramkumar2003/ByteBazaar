@@ -1,5 +1,5 @@
-"use client";
-import { ShoppingCart } from "lucide-react";
+'use client'
+import { ShoppingCart } from 'lucide-react'
 import {
   Sheet,
   SheetContent,
@@ -7,17 +7,17 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./ui/sheet";
-import { Separator } from "@/components/ui/separator";
-import { formatePrice } from "@/lib/utils";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
-import Image from "next/image";
+} from './ui/sheet'
+import { Separator } from '@/components/ui/separator'
+import { formatePrice } from '@/lib/utils'
+import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/button'
+import Image from 'next/image'
 
 const Cart = () => {
-  const itemCount = 0;
-  const fee = 1;
-  console.log(itemCount);
+  const itemCount = 0
+  const fee = 1
+  console.log(itemCount)
   return (
     <Sheet>
       <SheetTrigger className="group -m-2 flex items-center p-2">
@@ -35,31 +35,31 @@ const Cart = () => {
         </SheetHeader>
         {itemCount > 0 ? (
           <>
-            <div className={"flex w-full flex-col pr-6"}>
+            <div className={'flex w-full flex-col pr-6'}>
               {/*TODO: cart logic*/}
               cart items
             </div>
-            <div className={"space-y-4 pr-6"}>
+            <div className={'space-y-4 pr-6'}>
               <Separator />
-              <div className={"space-y-1.5 text-sm"}>
-                <div className={"flex "}>
-                  <span className={"flex-1"}>Shipping</span>
+              <div className={'space-y-1.5 text-sm'}>
+                <div className={'flex '}>
+                  <span className={'flex-1'}>Shipping</span>
                   <span>Free</span>
                 </div>
-                <div className={"flex "}>
-                  <span className={"flex-1"}>Transaction Fee</span>
+                <div className={'flex '}>
+                  <span className={'flex-1'}>Transaction Fee</span>
                   <span>{formatePrice(fee)}</span>
                 </div>
-                <div className={"flex "}>
-                  <span className={"flex-1"}>Total </span>
+                <div className={'flex '}>
+                  <span className={'flex-1'}>Total </span>
                   <span>{formatePrice(fee)}</span>
                 </div>
               </div>
               <SheetFooter>
                 <SheetTrigger asChild>
                   <Link
-                    href={"/cart"}
-                    className={buttonVariants({ className: "w-full" })}
+                    href={'/cart'}
+                    className={buttonVariants({ className: 'w-full' })}
                   >
                     Continue to Checkout
                   </Link>
@@ -70,23 +70,23 @@ const Cart = () => {
         ) : (
           <div
             className={
-              "flex h-full flex-col items-center justify-center space-y-1"
+              'flex h-full flex-col items-center justify-center space-y-1'
             }
           >
             <div
-              className={"relative mb-4 h-60 w-60 text-muted-foreground"}
+              className={'relative mb-4 h-60 w-60 text-muted-foreground'}
               aria-hidden={true}
             >
-              <Image src={"/hippo-empty-cart.png"} alt={"empty"} fill />
+              <Image src={'/hippo-empty-cart.png'} alt={'empty'} fill />
             </div>
-            <div className={"text-xl font-semibold"}>Your cart is empty</div>
+            <div className={'text-xl font-semibold'}>Your cart is empty</div>
             <SheetTrigger asChild>
               <Link
-                href={"/products"}
+                href={'/products'}
                 className={buttonVariants({
-                  variant: "link",
-                  size: "sm",
-                  className: "text-sm text-muted-foreground",
+                  variant: 'link',
+                  size: 'sm',
+                  className: 'text-sm text-muted-foreground',
                 })}
               >
                 Add items to your cart to checkout
@@ -96,7 +96,7 @@ const Cart = () => {
         )}
       </SheetContent>
     </Sheet>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart
